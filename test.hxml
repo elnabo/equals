@@ -1,0 +1,15 @@
+-cp src
+-main tests.Test
+-lib utest
+--each
+
+# neko
+-cmd echo "---- Neko -----"
+-neko testout/test.n
+-cmd neko testout/test.n
+--next
+
+# java
+-cmd echo "---- Java ----"
+-java testout/java/
+-cmd java -jar testout/java/Test.jar
