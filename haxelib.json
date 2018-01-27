@@ -1,0 +1,12 @@
+{
+	"name": "equals",
+	"url" : "https://github.com/elnabo/equals/",
+	"license": "MIT",
+	"tags": ["deep equal", "equal"],
+	"description": "Deep equality checker",
+	"version": "1.0.0",
+	"releasenote": "",
+	"contributors": ["elnabo"],
+	"classPath": "src",
+	"dependencies": {}
+}
