@@ -23,3 +23,8 @@ class Main {
 	}
 }
 ```
+
+## Limitations
+
+- Direct function equality returns physical equality
+- Object and typedef function var are ignored if not null

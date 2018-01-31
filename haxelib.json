@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"tags": ["deep equal", "equal"],
 	"description": "Deep equality checker",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"releasenote": "",
 	"contributors": ["elnabo"],
 	"classPath": "src",

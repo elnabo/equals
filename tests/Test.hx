@@ -53,7 +53,7 @@ class Test {
 			c:{a:new Cls(), c:B.TA(true)}
 		};
 		Assert.isTrue(a.equals(b));
-		b.a = null;
+		b.b = null;
 		Assert.isFalse(a.equals(b));
 
 		var c = new Abs([1, 2, 3]);
@@ -61,6 +61,14 @@ class Test {
 		var e = new Abs([1, 2, 3]);
 		Assert.isFalse(c.equals(d));
 		Assert.isTrue(c.equals(e));
+
+		var t1 = {f:function() { trace(1); }};
+		var t2 = {f:function() { trace(2); }};
+		var t3 = {f:null};
+		var t4 = {f:null};
+		Assert.isTrue(t1.equals(t2));
+		Assert.isFalse(t1.equals(t3));
+		Assert.isTrue(t3.equals(t4));
 	}
 
 	public static function main () {
