@@ -77,8 +77,8 @@ class Equal {
 		}
 
 		for (field in Reflect.fields(a)) {
-			var pa = Reflect.getProperty(a, field);
-			var pb = Reflect.getProperty(b, field);
+			var pa = Reflect.field(a, field);
+			var pb = Reflect.field(b, field);
 			if (isFunction(pa)) {
 				// ignore function as only physical equality can be tested, unless null
 				if (isNull(pa) != isNull(pb)) {
