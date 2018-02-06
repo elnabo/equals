@@ -9,7 +9,7 @@ haxelib install equals
 ## Usage
 
 ```haxe
-using equals.Equal
+using equals.Equal;
 
 class Main {
 	public static function main () {
