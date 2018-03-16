@@ -18,6 +18,10 @@ class Equal {
 		}
 	}
 
+	public static function diff<T> (a:T, b:T) : Bool {
+		return !equals(a, b);
+	}
+
 	public static function equals<T> (a:T, b:T) : Bool {
 		if (a == b) { return true; } // if physical equality
 		if (isNull(a) ||  isNull(b)) {
@@ -26,7 +30,7 @@ class Equal {
 
 		switch (Type.typeof(a)) {
 			case TNull, TInt, TBool, TUnknown:
-				return a == b; // shall not be reached
+				return a == b;
 			case TFloat:
 				return Math.isNaN(cast a) && Math.isNaN(cast b); // only valid true result remaining
 			case TFunction:
@@ -39,6 +43,9 @@ class Equal {
 				var b_args = EnumValueTools.getParameters(cast b);
 				return equals(a_args, b_args);
 			case TClass(_):
+				if (Std.is(a, String)) {
+					return a == b;
+				}
 				if (Std.is(a, Array)) {
 					var a = cast(a, Array<Dynamic>);
 					var b = cast(b, Array<Dynamic>);
